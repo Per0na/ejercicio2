@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver eventos en tiempo real</title>
+    <style>
+        .body {
+  height: 100vh;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+}
+
+.event-container {
+  width: 720px;
+  max-height: 70%;
+  min-height: 70%;
+  border: 2px solid #c5c5c5;
+  flex-direction: column;
+  align-items: stretch;
+  display: flex;
+}
+
+.event-header {
+  background-color: #6682ff;
+  padding: 20px;
+}
+
+.heading {
+  color: #fff;
+  margin-top: 10px;
+}
+
+.event-content {
+  flex: 1;
+  padding: 10px;
+  overflow: auto;
+}
+
+.event-box {
+  background-color: #f3f3f3;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  padding: 0 10px 10px;
+}
+
+.heading-2 {
+  margin-top: 10px;
+}
+
+.event-box-list {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.event-box-state {
+  color: #fff;
+  background-color: #2ba861;
+  border: 1px solid #000;
+  border-radius: 25px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+    </style>
+</head>
+<body class="body">
+    <div class="event-container">
+        <div class="event-header">
+            <h1 class="heading">Item:Eventos</h1>
+        </div>
+        <div id="event-content" class="event-content">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.2/sockjs.min.js"></script>
+    <script src="view-events.js"></script>
+</body>
+</html>
